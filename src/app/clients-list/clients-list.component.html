@@ -1,0 +1,20 @@
+<table
+  class="table-bordered table-striped"
+  id="list"
+  *ngIf="clients && clients.length"
+>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>ZIP</th>
+  </tr>
+  <tr *ngFor="let client of clients" [routerLink]="['/Client', client.ID]">
+    <td>{{ client.Name }}</td>
+    <td>{{ client.EMail }}</td>
+    <td>{{ client.Street }}</td>
+    <td>{{ client.City }}</td>
+    <td>{{ client.PostalCode }}</td>
+  </tr>
+</table>

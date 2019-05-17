@@ -1,8 +1,8 @@
 export class Client {
-  id: number;
-  name: string;
-  email: string;
-  street: string;
-  city: string;
-  zip: string;
+  ID: number;
+  Name: string;
+  EMail: string;
+  Street: string;
+  City: string;
+  PostalCode: string;
 }
