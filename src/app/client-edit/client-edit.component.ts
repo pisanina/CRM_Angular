@@ -18,6 +18,13 @@ export class ClientEditComponent implements OnInit {
       debugger;
     });
   }
+  deleteClient() {
+    debugger;
+    this._editClientService.deleteClient(this.client.ID).subscribe(client => {
+      debugger;
+    });
+  }
+
   constructor(
     editClientService: EditClientService,
     private route: ActivatedRoute

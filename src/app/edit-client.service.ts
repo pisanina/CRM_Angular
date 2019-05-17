@@ -40,6 +40,16 @@ export class EditClientService {
     );
   }
 
+  deleteClient(clientId: number): Observable<Client> {
+    return this.http.delete<Client>(this.clientEditUrl + "/" + clientId).pipe(
+      tap(data => {
+        debugger;
+        console.log("All: " + JSON.stringify(data));
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(err: HttpErrorResponse) {
     debugger;
     let errorMessage = "";

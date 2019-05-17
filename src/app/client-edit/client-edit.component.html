@@ -1,6 +1,6 @@
-<form (ngSubmit)="onSubmit()" #clientForm="ngForm">
-  <div class="container">
-    <div class="jumbotron">
+<div class="container">
+  <div class="jumbotron">
+    <form (ngSubmit)="onSubmit()" #clientForm="ngForm">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputName">Name</label>
@@ -65,6 +65,13 @@
       <button id="submitClient" type="submit" class="btn btn-primary">
         Edit Client
       </button>
-    </div>
+    </form>
+    <button
+      id="deleteClientButton"
+      class="btn btn-primary"
+      (click)="deleteClient()"
+    >
+      Delete Client
+    </button>
   </div>
-</form>
+</div>
