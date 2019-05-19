@@ -1,0 +1,39 @@
+<form (ngSubmit)="onSubmit()" #sellerForm="ngForm" id="sellerForm">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputName">Name</label>
+          <input
+            type="text"
+            [(ngModel)]="newseller.Name"
+            class="form-control"
+            id="inputName"
+            placeholder="Name"
+            autofocus
+            required
+            minlength="3"
+            maxlength="20"
+            name="Name"
+          />
+        </div>
+      </div>
+      <button id="submitSeller" type="submit" class="btn btn-primary">
+        Add Seller
+      </button>
+    </div>
+  </div>
+</form>
+
+<table
+  class="table-bordered table-striped"
+  id="list"
+  *ngIf="sellers && sellers.length"
+>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let seller of sellers" [routerLink]="['/Seller', seller.ID]">
+    <td>{{ seller.Name }}</td>
+  </tr>
+</table>

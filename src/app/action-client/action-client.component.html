@@ -1,0 +1,16 @@
+<table
+  class="table-bordered table-striped"
+  id="list"
+  *ngIf="actions && actions.length"
+>
+  <tr>
+    <th>SellerID</th>
+    <th>Message Date</th>
+    <th>Message</th>
+  </tr>
+  <tr *ngFor="let action of actions" [routerLink]="['/Action', action.ID]">
+    <td>{{ action.SellerId }}</td>
+    <td>{{ action.MessageDate }}</td>
+    <td>{{ action.Message }}</td>
+  </tr>
+</table>

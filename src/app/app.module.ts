@@ -12,6 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from "./home/home.component";
 import { ClientsListComponent } from "./clients-list/clients-list.component";
 import { ClientEditComponent } from "./client-edit/client-edit.component";
+import { SellerComponent } from "./seller/seller.component";
+import { ActionClientComponent } from './action-client/action-client.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ClientEditComponent } from "./client-edit/client-edit.component";
     ClientsComponent,
     HomeComponent,
     ClientsListComponent,
-    ClientEditComponent
+    ClientEditComponent,
+    SellerComponent,
+    ActionClientComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,8 @@ import { ClientEditComponent } from "./client-edit/client-edit.component";
     RouterModule.forRoot([
       { path: "Home", component: HomeComponent },
       { path: "Clients", component: ClientsComponent },
-      { path: "Client/:id", component: ClientEditComponent }
+      { path: "Client/:id", component: ClientEditComponent },
+      { path: "Seller", component: SellerComponent }
     ])
   ],
   providers: [],
